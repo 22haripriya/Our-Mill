@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Registration Successfull</title>
+<style>
+body{
+background-image:url('flour1.jpg');
+background-repeat: no-repeat;
+background-attachment:fixed;
+background-size: cover;
+color:black;
+font-size:20px;
+margin-left:450px;
+margin-top:200px;
+}
+.b1{
+			background-color:black;
+				border-radius : 7px;
+				color: white;
+		}
+</style>
+<script>
+var username = localStorage.getItem("Regname");
+document.writeln("Welcome "+username);
+</script>
+</head>
+<body>
+<form name="myform" method="post" action="file:///G:/edubridge/Webproject/Hp.html">
+<h3> Your Registeration is Successfull!!!</h3>
+<input class="b1" type="submit" value="Okay">
+</form>
+</body>
+</html>

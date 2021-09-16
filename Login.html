@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Login Form</title>
+<style>
+body{
+background-image:url('flour1.jpg');
+background-repeat: no-repeat;
+background-attachment:fixed;
+background-size: cover;
+color:black;
+font-size:20px;
+margin-left:600px;
+margin-top:200px;
+}
+.b1{
+			background-color:black;
+				border: 5px black solid;
+				border-radius : 7px;
+				color: white;
+		}
+</style>
+</head>
+<script>
+function validateregister(){
+var password=document.myform.password.value;
+var phonenumber=document.myform.phonenumber.value;
+
+if(phonenumber.length!=10){
+alert("Phone number must be 10digits");
+return false;
+}else if(password.length<6){
+alert("Password must be atleast 6 characters long.");
+return false;
+}
+}
+</script>
+<body>
+<form name="myform" method="post" action="file:///G:/edubridge/Webproject/Hp.html" onsubmit="return validateregister()">
+<h1> Login!!!</h1>
+<b>Phone Number:</b>
+<input type="tell" name="phonenumber"><br><br>
+
+<b>Password:</b>
+<input type="password" name="password"><br/><br>
+<input class="b1" type="submit" value="Login">
+</form>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<html>
+<title>Order</title>
+<head>
+<style>
+body{
+background-image:url('flour1.jpg');
+background-repeat: no-repeat;
+background-size:cover;
+background-attachment:fixed;
+}
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0px;
+	overflow: hidden;/*to fit buttons in the tab without overlapping*/
+	background-color: yellow;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	
+}
+li{
+	float: left;
+	border-right: 3px solid red;
+}
+li a{
+	display: block;
+	color: red;
+	font-size: 20px;
+	text-align: center;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+.active{
+background-color: gravy;
+color: black;
+}
+td,li a:hover/* to show color when move towards the bar*/{
+	background-color: orange;
+	color: white;
+}
+table{
+text-align: center;
+font-size: 20px;
+background-color: white;
+height: 50%;
+}
+button, select{
+	background-color: orange;
+	border-color:black;
+	padding: 5px 5px;
+	margin-left: 10px;
+	color:white;
+	border-radius:10px;
+}
+h4{
+background-color:orange;
+font-size: 20px;
+text-align: center;
+padding: 10px 0 30px 30px;
+color: white;
+}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<ul>
+<li><a href="file:///G:/edubridge/Webproject/Hp.html">Home</a></li>
+<li><a href="file:///G:/edubridge/Webproject/products.html">Products</a></li>
+<li><a href="file:///G:/edubridge/Webproject/About.html">About Us</a></li>
+<li><a href="file:///G:/edubridge/Webproject/Cart.html">Cart</a></li>
+<li><a class="active" href="file:///G:/edubridge/Webproject/Order.html">Order</a></li>
+<li><a href="file:///G:/edubridge/Webproject/Homepage.html">Logout</a></li>
+<li><a href="file:///G:/edubridge/Webproject/Profile.html">Profile</a></li>
+</ul>
+<br>
+<br>
+<script> 
+
+		var opt = localStorage.getItem("optvalue");
+					
+		if(opt != "select")
+		{
+			if(opt == "1kg")
+				price = 1*280;
+			else if(opt == "2kg")
+				price = 2*280;
+			else if(opt == "5kg")
+				price = 5*280;
+			else if(opt == "10kg")
+				price = 10*280;
+				
+				document.writeln('<table>');
+				document.writeln('<tr>');
+				document.writeln('<td>');
+				document.writeln('<img src="chilli.jpg" width="330px" height="300px">'+"<br>"+"Chilli Powder "+opt+"<br> "+price+"/-");
+				document.writeln('</td>');
+				
+		}
+		else
+		{
+			opt = "select";
+		}
+</script>
+<script>
+	var opt1 = localStorage.getItem("opt1value");
+		
+		if(opt1 != "select1")
+		{
+			if(opt1 == "1kg")
+				price1 = 1*480;
+			else if(opt1 == "2kg")
+				price1 = 2*480;
+			else if(opt1 == "5kg")
+				price1 = 5*480;
+			else if(opt1 == "10kg")
+				price1 = 10*480;
+				
+				document.writeln('<td>');
+				document.writeln('<img src="kashmiri.jpg" width="330px" height="300px">'+"<br>"+"Kashmiri Chilli Powder "+opt1+"<br>"+price1+"/-");
+				document.writeln('</td>');
+				
+		}
+		else
+		{
+			opt1 = "select1";
+		}
+</script>
+<script>
+		var opt2 = localStorage.getItem("opt2value");
+		
+			if(opt2 != "select2")
+		{
+			if(opt2 == "1kg")
+				price2 = 1*225;
+			else if(opt2 == "2kg")
+				price2 = 2*225;
+			else if(opt2 == "5kg")
+				price2 = 5*225;
+			else if(opt2 == "10kg")
+				price2 = 10*225;
+				
+				document.writeln('<td>');
+				document.writeln('<img src="coriander.jpg" width="330px" height="300px">'+"<br>"+"Coriander Powder "+opt2+"<br> "+price2+"/-");
+				document.writeln('</td>');
+		}
+		else
+		{
+			opt2 = "select2";
+		}
+</script>
+<script>
+	var opt3 = localStorage.getItem("opt3value");
+			
+			if(opt3 != "select3")
+		{
+			if(opt3 == "1kg")
+				price3 = 1*48;
+			else if(opt3 == "2kg")
+				price3 = 2*48;
+			else if(opt3 == "5kg")
+				price3 = 5*48;
+			else if(opt3 == "10kg")
+				price3 = 10*48;
+				
+				document.writeln('<td>');
+				document.writeln('<img src="wheat.jpg" width="330px" height="300px">'+"<br>"+"Wheat Flour "+opt3+"<br>"+price3+"/-");
+				document.writeln('</td>');
+				document.writeln('</tr>');
+		}
+		else
+		{
+			opt3 = "select3";
+		}
+</script>
+<script>
+var opt4 = localStorage.getItem("opt4value");
+			
+			if(opt4 != "select4")
+		{
+			if(opt4 == "1kg")
+				price4 = 1*50;
+			else if(opt4 == "2kg")
+				price4 = 2*50;
+			else if(opt4 == "5kg")
+				price4 = 5*50;
+			else if(opt4 == "10kg")
+				price4 = 10*50;
+				
+				document.writeln('<tr>');
+				document.writeln('<td>');
+				document.writeln('<img src="ragi.jpg" width="330px" height="300px">'+"<br>"+"Ragi Flour "+opt4+"<br>"+price4+"/-");
+				document.writeln('</td>');
+		}
+		else
+		{
+			opt4 = "select4";
+		}
+</script>
+<script>
+	var opt5 = localStorage.getItem("opt5value");
+			
+			if(opt5 != "select5")
+		{
+			if(opt5 == "1kg")
+				price5 = 1*55;
+			else if(opt5 == "2kg")
+				price5 = 2*55;
+			else if(opt5 == "5kg")
+				price5 = 5*55;
+			else if(opt5 == "10kg")
+				price5 = 10*55;
+				
+				document.writeln('<td>');
+				document.writeln('<img src="rice.jpg" width="330px" height="300px">'+"<br>"+"Rice Flour "+opt5+"<br> "+price5+"/-");
+				document.writeln('</td>');
+		}
+		else
+		{
+			opt5 = "select5";
+		}
+</script>
+<script>
+	var opt6 = localStorage.getItem("opt6value");
+	if(opt6 != "select6")
+		{
+			if(opt6 == "1kg")
+				price6 = 1*250;
+			else if(opt6 == "2kg")
+				price6 = 2*250;
+			else if(opt6 == "5kg")
+				price6 = 5*250;
+			else if(opt6 == "10kg")
+				price6 = 10*250;
+				
+				document.writeln('<td>');
+				document.writeln('<img src="turmeric.jpg" width="330px" height="300px">'+"<br>"+"Turmeric Powder "+opt6+"<br>"+price6+"/-");
+				document.writeln('</td>');
+		}
+		else
+		{
+			opt6 = "select6";
+		}
+			
+</script>
+<script>
+	var opt7 = localStorage.getItem("opt7value");
+	if(opt7 != "select7")
+		{
+			if(opt7 == "1kg")
+				price7 = 1*450;
+			else if(opt7 == "2kg")
+				price7 = 2*450;
+			else if(opt7 == "5kg")
+				price7 = 5*450;
+			else if(opt7 == "10kg")
+				price7 = 10*450;
+				
+				document.writeln('<td>');
+				document.writeln('<img src="garammasala.jpg" width="330px" height="300px">'+"<br>"+"Garam Masala Powder "+opt7+"<br>"+price7+"/-");
+				document.writeln('</td>');
+				document.writeln('</tr>');
+				document.writeln('</table>');
+		}
+		else
+		{
+			opt7 = "select7";
+		}
+</script>
+<script>
+let price = localStorage.getItem("p");
+let price1 = localStorage.getItem("p1");
+let price2 = localStorage.getItem("p2");
+let price3 = localStorage.getItem("p3");
+let price4 = localStorage.getItem("p4");
+let price5 = localStorage.getItem("p5");
+let price6 = localStorage.getItem("p6");
+let price7 = localStorage.getItem("p7");
+
+	
+let total = 0;
+total = parseInt(price)+parseInt(price1)+parseInt(price2)+parseInt(price3)+parseInt(price4)+parseInt(price5)+parseInt(price6)+parseInt(price7);
+
+document.writeln('<h4>');
+document.writeln("Total Amount = "+total+"/-"+"<br>");
+document.writeln("Payment(Cash on Delivery)"+"<br>"+
+"Items will be delivered within 3days");
+document.writeln('</h4>');
+
+</script>
+</body>
+</html>

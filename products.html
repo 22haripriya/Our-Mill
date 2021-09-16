@@ -1,0 +1,197 @@
+<html>
+<title>Products</title>
+<head>
+<style>
+body{
+background-image:url('flour1.jpg');
+background-repeat: no-repeat;
+background-size:cover;
+background-attachment:fixed;
+}
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0px;
+	overflow: hidden;/*to fit buttons in the tab without overlapping*/
+	background-color: yellow;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+}
+li{
+	float: left;
+	border-right: 3px solid red;
+}
+li a{
+	display: block;
+	color: red;
+	font-size: 20px;
+	text-align: center;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+.active{
+background-color: gravy;
+color: black;
+}
+td,li a:hover/* to show color when move towards the bar*/{
+	background-color: orange;
+	color: white;
+}
+table{
+text-align: center;
+font-size: 20px;
+background-color: white;
+height: 50%;
+display: block;
+}
+button, select{
+	background-color: orange;
+	border-color:black;
+	padding: 5px 5px;
+	margin-left: 10px;
+	color:white;
+	border-radius:10px;
+}
+
+
+</style>
+<script>
+function cart()
+{
+var opt= document.getElementById('selection').value;
+var opt1= document.getElementById('selection1').value;
+var opt2=document.getElementById('selection2').value;
+var opt3=document.getElementById('selection3').value;
+var opt4=document.getElementById('selection4').value;
+var opt5=document.getElementById('selection5').value;
+var opt6=document.getElementById('selection6').value;
+var opt7=document.getElementById('selection7').value;
+
+
+if(opt == "select" && opt1 == "select1" && opt2 == "select2" && opt3 == "select3" && opt4 == "select4" && opt5 == "select5" && opt6 == "select6" && opt7 == "select7")
+{
+alert("Added to Cart!!");
+
+return false;
+}else if(opt != "select" || opt1 != "select1" || opt2 != "select2" || opt3 != "select3" || opt4 != "select4" || opt5 != "select5" || opt6 != "select6" || opt7 != "select7")
+{
+alert("Added to cart");
+	if(opt != "select")
+	{
+		localStorage.setItem("optvalue",opt);
+		//document.writeln("Chilli Powder "+opt);
+	}
+	else{
+		localStorage.setItem("optvalue",opt);
+		//document.writeln("Chilli Powder "+opt);
+	}
+	if(opt1 != "select1")
+	{
+		localStorage.setItem("opt1value",opt1);
+		//document.writeln("Kashmiri Chilli Powder "+opt1);
+	} 
+	else{
+		localStorage.setItem("opt1value",opt1);
+		//document.writeln("Kashmiri Chilli Powder "+opt1);
+	}
+	if(opt2 != "select2")
+	{
+		localStorage.setItem("opt2value",opt2);
+		//document.writeln("Coriander Powder "+opt2);
+	}
+	else {
+		localStorage.setItem("opt2value",opt2);
+		//document.writeln("Coriander Powder "+opt2);
+	}
+	if(opt3 != "select3")
+	{
+		localStorage.setItem("opt3value",opt3);
+		//document.writeln("Wheat Flour "+opt3);
+	}
+	else {
+		localStorage.setItem("opt3value",opt3);
+		//document.writeln("Wheat Flour "+opt3);
+	}
+	if(opt4 != "select4")
+	{
+		localStorage.setItem("opt4value",opt4);
+		//document.writeln("Ragi Flour "+opt4);
+	}
+	else {
+		localStorage.setItem("opt4value",opt4);
+		//document.writeln("Ragi Flour "+opt4);
+	}
+	if(opt5 != "select5")
+	{
+		localStorage.setItem("opt5value",opt5);
+		//document.writeln("Rice Flour "+opt5);
+	}
+	else {
+		localStorage.setItem("opt5value",opt5);
+		//document.writeln("Rice Flour "+opt5);
+	}
+
+	if(opt6 != "select6")
+	{
+		localStorage.setItem("opt6value",opt6);
+		//document.writeln("Turmeric Powder "+opt6);
+	}
+	else {
+		localStorage.setItem("opt6value",opt6);
+		//document.writeln("Turmeric Powder "+opt6);
+	}
+	if(opt7 != "select7")
+	{
+		localStorage.setItem("opt7value",opt7);
+		//document.writeln("Garam Masala Powder "+opt7);
+	}
+	else{
+		localStorage.setItem("opt7value",opt7);
+		//document.writeln("Garam Masala Powder "+opt7);
+	}
+
+
+return true;
+
+}
+}
+</script>
+</head>
+<body>
+<ul>
+<li><a href="file:///G:/edubridge/Webproject/Hp.html">Home</a></li>
+<li><a class="active" href="file:///G:/edubridge/Webproject/products.html">Products</a></li>
+<li><a href="file:///G:/edubridge/Webproject/About.html">About Us</a></li>
+<li><a href="file:///G:/edubridge/Webproject/Cart.html">Cart</a></li>
+<li><a href="file:///G:/edubridge/Webproject/Order.html">Order</a></li>
+<li><a href="file:///G:/edubridge/Webproject/Homepage.html">Logout</a><li>
+<li><a href="file:///G:/edubridge/Webproject/Profile.html">Profile</a></li>
+</ul>
+<br>
+<br>
+<form name="myform" method="post" action="file:///G:/edubridge/Webproject/Cart.html">
+<table>
+<tr><td><a><img src="G:\edubridge\Webproject\chilli.jpg" width="330px" height="245px"><br>Chilli Powder 280/kg <br><select id="selection">
+<option value="select">Select</option><option>1kg</option><option>2kg</option><option>5kg</option><option>10kg</option></select></a></td>
+<td><a><img src="G:\edubridge\Webproject\kashmiri.jpg" width="330px" height="245px"><br>Kashmiri Chilli Powder 480/kg<br><select id="selection1">
+<option value="select1">Select</option><option>1kg</option><option>2kg</option><option>5kg</option><option>10kg</option></select></a></td>
+<td><a><img src="G:\edubridge\Webproject\coriander.jpg" width="330px" height="245px"><br>Coriander Powder 225/kg</br><select id="selection2">
+<option value="select2">Select</option><option>1kg</option><option>2kg</option><option>5kg</option><option>10kg</option></select></a></td>
+<td><a><img src="G:\edubridge\Webproject\wheat.jpg" width="330px" height="245px"><br>Wheat Flour 48/kg<br><select id="selection3">
+<option value="select3">Select</option><option>1kg</option><option>2kg</option><option>5kg</option><option>10kg</option></select></a></td></tr>
+<tr><td><a><img src="G:\edubridge\Webproject\ragi.jpg" width="330px" height="245px"><br>Ragi Flour 50/kg</br><select id="selection4">
+<option value="select4">Select</option><option>1kg</option><option>2kg</option><option>5kg</option><option>10kg</option></select></a></td>
+<td><a><img src="G:\edubridge\Webproject\rice.jpg" width="330px" height="245px"><br>Rice Flour 55/kg</br><select id="selection5">
+<option value="select5">Select</option><option>1kg</option><option>2kg</option><option>5kg</option><option>10kg</option></select></a></td>
+<td><a><img src="G:\edubridge\Webproject\turmeric.jpg" width="330px" height="245px"><br>Turmeric Powder 250/kg</br><select id="selection6">
+<option value="select6">Select</option><option>1kg</option><option>2kg</option><option>5kg</option><option>10kg</option></select></a></td>
+<td><a><img src="G:\edubridge\Webproject\garammasala.jpg" width="330px" height="245px"><br>Garam Masala Powder 450/kg</br><select id="selection7">
+<option value="select7">Select</option><option>1kg</option><option>2kg</option><option>5kg</option><option>10kg</option></select></a></td>
+</tr>
+<tr><td width="800px" height="50px" ><button onclick="return cart()">Add</button></td></tr>
+</table>
+</form>
+</body>
+</html>
